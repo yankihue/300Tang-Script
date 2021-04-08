@@ -6,6 +6,13 @@ I used [this resource](https://github.com/xuchunyang/300) to get all 320 poems i
 
 # Usage
 For Ubuntu:
+Clone the repo. IMPORTANT: You have to clone it to your desktop.
+```bash
+cd ~/Desktop
+git clone https://github.com/yankihue/300Tang-Script 300Tang
+```
+
+If you want to put it anywhere else, you should change main.py and point it at that directory. By default the script points at desktop, inside the folder 300Tang.
 
 You need the [WQY Microhei](https://github.com/anthonyfok/fonts-wqy-microhei) font for this to work. To install:
 
@@ -25,7 +32,6 @@ poetry install
 at the base directory of the project. Then run
 
 ```bash
-poetry shell
 python3 main.py
 ```
 If you like it and want it to automatically run on the background starting from boot, add a .desktop file to /home/your_name/.config/autostart/
