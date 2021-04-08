@@ -12,6 +12,12 @@ You need the [WQY Microhei](https://github.com/anthonyfok/fonts-wqy-microhei) fo
 ```bash
 sudo apt-get install ttf-wqy-microhei 
 ```
+
+To get poetry
+```bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
+```
+
 Afterwards, if you want to test the script first, run
 ```bash
 poetry install
