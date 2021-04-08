@@ -36,7 +36,7 @@ at the base directory of the project. Then run
 ```bash
 python3 main.py
 ```
-If you like it and want it to automatically run on the background starting from boot, add a .desktop file to /home/your_name/.config/autostart/
+If you like it and want it to automatically run on the background starting from boot, add a .desktop file like below to /home/your_name/.config/autostart/
 ```
 [Desktop Entry]
 Encoding=UTF-8
@@ -51,7 +51,7 @@ Categories=
 X-GNOME-Autostart-enabled=true
 X-GNOME-Autostart-Delay=10
 ```
-Modify the path and save the .desktop file.
+Modify the exec=.../main.py path if you placed the project in another directory. If its in your desktop, you can use this one without modifying.
 
 # TODO
 * Add more base images
