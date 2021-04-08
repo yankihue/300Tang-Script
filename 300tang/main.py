@@ -1,10 +1,30 @@
 from PIL import Image, ImageFont, ImageDraw 
+import json
+import random
+
+#random poem id
+n = random.randint(0,319)
+print(n)
+
+with open('poems.json') as f:
+  data = json.load(f)
+
+
+def find_poem (n):
+ for keyval in data:
+  if n == keyval['id']:
+   return keyval['contents']
+
+if (find_poem(n) != None):
+  title_text=find_poem(n)
+else:
+  print("Couldn't get poem. Please try running the application again")
+
+
+
 
 
 base = Image.open("base.jpeg")
-
-title_text = "孤鸿海上来，池潢不敢顾。\n侧见双翠鸟，巢在三珠树。\n矫矫珍木巅，得无金丸惧。\n美服患人指，高明逼神恶。\n今我游冥冥，弋者何所慕。"
-
 
 image_editable = ImageDraw.Draw(base)
 
