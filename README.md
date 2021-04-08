@@ -6,13 +6,15 @@ I used [this resource](https://github.com/xuchunyang/300) to get all 320 poems i
 
 # Usage
 For Ubuntu:
+
+
 Clone the repo. IMPORTANT: You have to clone it to your desktop.
 ```bash
 cd ~/Desktop
 git clone https://github.com/yankihue/300Tang-Script 300Tang
 ```
 
-If you want to put it anywhere else, you should change main.py and point it at that directory. By default the script points at desktop, inside the folder 300Tang.
+If you want to put it anywhere else, you should change main.py and point it at that directory([change this line](https://github.com/yankihue/300Tang-Script/blob/db4c9e56edd7b80cd49506fc5a0cc99b2559b1cb/300tang/main.py#L49)). By default the script points at desktop, inside the folder 300Tang.
 
 You need the [WQY Microhei](https://github.com/anthonyfok/fonts-wqy-microhei) font for this to work. To install:
 
@@ -20,7 +22,7 @@ You need the [WQY Microhei](https://github.com/anthonyfok/fonts-wqy-microhei) fo
 sudo apt-get install ttf-wqy-microhei 
 ```
 
-To get poetry
+Get [poetry](https://python-poetry.org/) if you don't have it:
 ```bash
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
 ```
