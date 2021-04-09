@@ -10,7 +10,7 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(),os.path.dirname(__file_
 
 while True:
     #random poem id
-    n = random.randint(0,319)
+    n = random.randint(1,320)
     print(n)
 
     # with open('poems.json') as f:
