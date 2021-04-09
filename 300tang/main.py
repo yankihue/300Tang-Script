@@ -1,18 +1,22 @@
+#!/usr/bin/python3
+
 from PIL import Image, ImageFont, ImageDraw 
 import json
 import random
 from time import time, sleep
 import os
 
+__location__ = os.path.realpath(os.path.join(os.getcwd(),os.path.dirname(__file__)))
 
 while True:
     #random poem id
     n = random.randint(0,319)
     print(n)
 
-    with open('poems.json') as f:
+    # with open('poems.json') as f:
+       # data = json.load(f)
+    with open(os.path.join(__location__, 'poems.json'),'r') as f:
         data = json.load(f)
-
 
     def find_poem (n):
         for keyval in data:
@@ -30,7 +34,8 @@ while True:
     if (find_title(n) != None):
         title=find_title(n)            
 
-    base = Image.open("base.jpeg")
+    base = Image.open(os.path.join(__location__, 'base.jpeg'))
+    
 
     image_editable = ImageDraw.Draw(base)
 
@@ -44,7 +49,7 @@ while True:
 
     image_editable.text(((1920-w2)/2,((1200-h)/2)-h), title, (49, 27, 8,64),font=ttf)
 
-
+    
     base.save('output.jpeg')
-    os.system('/usr/bin/gsettings set org.gnome.desktop.background picture-uri ~/Desktop/300Tang/300tang/output.jpeg')
+    os.system('dbus-launch --exit-with-session env DISPLAY=:0.0 gsettings set org.gnome.desktop.background picture-uri ~/Desktop/300Tang/300tang/output.jpeg')
     sleep(60 - time() % 60)
