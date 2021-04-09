@@ -51,5 +51,5 @@ while True:
 
     
     base.save('output.jpeg')
-    os.system('dbus-launch --exit-with-session env DISPLAY=:0.0 gsettings set org.gnome.desktop.background picture-uri ~/Desktop/300Tang/300tang/output.jpeg')
+    os.system('gsettings set org.gnome.desktop.background picture-uri ~/Desktop/300Tang/300tang/output.jpeg')
     sleep(60 - time() % 60)
