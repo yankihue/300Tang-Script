@@ -41,18 +41,20 @@ If you like it and want it to automatically run on the background starting from 
 [Desktop Entry]
 Encoding=UTF-8
 Name=300Tang
-Comment=Random wallpaper generator
+Comment=Random wallpaper generator.
 Icon=gnome-info
-Exec=python3 ~/Desktop/300Tang/300tang/main.py
+Exec=gnome-terminal -x bash -c "cd ~/Desktop/300Tang/300tang && python3 main.py exec bash"
 Terminal=false
 Type=Application
 Categories=
 
 X-GNOME-Autostart-enabled=true
 X-GNOME-Autostart-Delay=10
+
 ```
-Modify the exec=.../main.py path if you placed the project in another directory. If its in your desktop, you can use this one without modifying.
+Modify the Exec=cd .../300Tang/300tang path if you placed the project in another directory. If its in your desktop, you can use this one without modifying.
 
 # TODO
+* Make .service file and use systemctl to run script without terminal
 * Add more base images
 * Add English and Pinyin
