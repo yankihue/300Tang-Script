@@ -8,7 +8,7 @@ I used [this resource](https://github.com/xuchunyang/300) to get all 320 poems i
 For Ubuntu:
 
 
-Clone the repo. IMPORTANT: You have to clone it to your desktop.
+Clone the repo. 
 ```bash
 cd ~/Desktop
 git clone https://github.com/yankihue/300Tang-Script 300Tang
@@ -31,12 +31,20 @@ Afterwards, if you want to test the script first, run
 ```bash
 poetry install
 ```
-at the base directory of the project. Then run
+at the base directory of the project. 
+
+Then run
 
 ```bash
+cd 300tang
 python3 main.py
 ```
-If you like it and want it to automatically run on the background starting from boot, add a .desktop file like below to /home/your_name/.config/autostart/
+I use [drop down terminal](https://extensions.gnome.org/extension/442/drop-down-terminal/) to manually start it after boot like this, and just leave that terminal to run it. That way, you don't have to create a .desktop file, have a terminal tab open always, etc. If you would like everything to be handled automatically from booting, keep reading:
+
+# Automating it
+
+If you would like the script to automatically run on the background starting from boot, add a .desktop file like below to /home/your_name/.config/autostart/
+
 ```
 [Desktop Entry]
 Encoding=UTF-8
@@ -52,7 +60,9 @@ X-GNOME-Autostart-enabled=true
 X-GNOME-Autostart-Delay=10
 
 ```
-Modify the Exec=cd .../300Tang/300tang path if you placed the project in another directory. If its in your desktop, you can use this one without modifying.
+ if you placed the project in another directory, modify the Exec=cd .../300Tang/300tang path. If its in your desktop, you can use this one without modifying. Just copy it to /home/your_name/.config/autostart/300Tang.desktop
+
+
 
 # TODO
 * Make .service file and use systemctl to run script without terminal
