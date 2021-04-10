@@ -39,7 +39,7 @@ Then run
 cd 300tang
 python3 main.py
 ```
-I use [drop down terminal](https://extensions.gnome.org/extension/442/drop-down-terminal/) to manually start it after boot like this, and just leave that terminal to run it. That way, you don't have to create a .desktop file, have a terminal tab open always, etc. If you would like everything to be handled automatically from booting, keep reading:
+I use [drop down terminal](https://extensions.gnome.org/extension/442/drop-down-terminal/) to manually start it after boot like this, and just leave that terminal to run it. That way, you don't have to create a .desktop file, have a terminal tab open always, etc. If you would like everything to be handled automatically from boot, keep reading:
 
 # Automating it
 
