@@ -25,7 +25,6 @@ sudo apt-get install ttf-wqy-microhei
 Get [poetry](https://python-poetry.org/) if you don't have it:
 ```bash
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
-source $HOME/.poetry/env
 ```
 
 Afterwards, if you want to test the script first, run
@@ -37,6 +36,7 @@ at the base directory of the project.
 Then run
 
 ```bash
+poetry shell
 cd 300tang
 python3 main.py
 ```
