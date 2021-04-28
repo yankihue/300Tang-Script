@@ -5,8 +5,7 @@ I used [this resource](https://github.com/xuchunyang/300) to get all 320 poems i
 ![Screenshot](/screenshot.png)
 
 # Usage
-For Ubuntu:
-
+For GNOME:
 
 Clone the repo. 
 ```bash
